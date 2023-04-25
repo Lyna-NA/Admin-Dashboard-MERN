@@ -15,7 +15,6 @@ import Header from 'components/Header';
 import { useGetProductsQuery } from 'state/api';
 
 const Product = ({_id, name, description, price, rating, category, supply, stat}) => {
-  console.log("🚀 ~ file: index.jsx:18 ~ Product ~ stat:", stat)
   const [isExpanded, setIsExpanded] = useState(false);
   const theme = useTheme();
 

@@ -2,7 +2,7 @@ import React from 'react'
 import {Typography, useTheme, Box} from '@mui/material';
 
 const Header = ({title, subtitle}) => {
-    const theme = useTheme();
+  const theme = useTheme();
   return (
     <Box>
       <Typography
