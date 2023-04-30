@@ -94,6 +94,7 @@ const Products = () => {
         >
           {data.map((product) => (
             <Product
+              key={product._id}
               _id={product._id}
               name={product.name}
               description={product.description}
