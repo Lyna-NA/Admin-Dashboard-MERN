@@ -108,7 +108,7 @@ const Dashboard = () => {
         mt="20px"
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
-        gridAutoRows="125px"
+        gridAutoRows="130px"
         gap="20px"
         sx={{
           '& > div': { gridColumn: isNonMediumScreens ? undefined : 'span 12' },
