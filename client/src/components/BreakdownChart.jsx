@@ -26,7 +26,7 @@ const BreakdownChart = ({ isDashboard = false }) => {
 
   return (
     <Box
-      height={isDashboard ? '400px' : '100%'}
+      height={isDashboard ? '330px' : '100%'}
       width={undefined}
       minHeight={isDashboard ? '325px' : undefined}
       minWidth={isDashboard ? '325px' : undefined}
@@ -100,7 +100,7 @@ const BreakdownChart = ({ isDashboard = false }) => {
             itemsSpacing: 0,
             itemWidth: 85,
             itemHeight: 18,
-            itemTextColor: '#999',
+            itemTextColor: '#999999',
             itemDirection: 'left-to-right',
             itemOpacity: 1,
             symbolSize: 18,
