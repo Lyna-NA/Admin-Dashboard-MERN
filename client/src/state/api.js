@@ -13,7 +13,8 @@ export const api = createApi({
     'Geography',
     'Sales',
     'Admin',
-    'Performance'
+    'Performance',
+    'Dashboard'
   ],
   endpoints: (builder) => ({
     getUserById: builder.query({
@@ -51,6 +52,10 @@ export const api = createApi({
     getUserPerformance: builder.query({
       query: (id) => `management/performance/${id}`,
       providesTags: ['Performance']
+    }),
+    getDashboard: builder.query({
+      query: () => 'general/dashboard',
+      providesTags: ['Dashboard']
     })
   }),
 });
@@ -66,4 +71,5 @@ export const {
   useGetSalesQuery,
   useGetAdminsQuery,
   useGetUserPerformanceQuery,
+  useGetDashboardQuery
 } = api;

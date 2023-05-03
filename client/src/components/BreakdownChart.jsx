@@ -1,41 +1,35 @@
 import React from 'react';
-import { useGetSalesQuery } from '../state/api';
 import { ResponsivePie } from '@nivo/pie';
-import { useTheme, Box, Typography } from '@mui/material';
+import { Box, Typography, useTheme } from '@mui/material';
+import { useGetSalesQuery } from 'state/api';
 
 const BreakdownChart = ({ isDashboard = false }) => {
   const { data, isLoading } = useGetSalesQuery();
   const theme = useTheme();
+
+  if (!data || isLoading) return 'Loading...';
+
   const colors = [
     theme.palette.secondary[500],
     theme.palette.secondary[300],
     theme.palette.secondary[300],
     theme.palette.secondary[500],
   ];
-
-  console.log('data', data);
-  let formattedData = [];
-
-  if (data) {
-    formattedData = Object.entries(data.salesByCategory).map(
-      ([category, sales], index) => ({
-        id: category,
-        label: category,
-        value: sales,
-        color: colors[index],
-      })
-    );
-  }
-
-  if (!data || isLoading) return;
-  <>Loading...</>;
+  const formattedData = Object.entries(data.salesByCategory).map(
+    ([category, sales], i) => ({
+      id: category,
+      label: category,
+      value: sales,
+      color: colors[i],
+    })
+  );
 
   return (
     <Box
-      height={isDashboard ? '400px' : '100%'}
+      height={isDashboard ? '325px' : '100%'}
       width={undefined}
-      minHeight={isDashboard ? '325px' : undefined}
-      minWidth={isDashboard ? '325px' : undefined}
+      minHeight={isDashboard ? '320px' : undefined}
+      minWidth={isDashboard ? '330px' : undefined}
       position="relative"
     >
       <ResponsivePie
@@ -81,15 +75,13 @@ const BreakdownChart = ({ isDashboard = false }) => {
         }
         sortByValue={true}
         innerRadius={0.45}
-        //   padAngle={0.7}
-        //   cornerRadius={3}
-        enableArcLinkLabels={!isDashboard}
         activeOuterRadiusOffset={8}
         borderWidth={1}
         borderColor={{
           from: 'color',
           modifiers: [['darker', 0.2]],
         }}
+        enableArcLinkLabels={!isDashboard}
         arcLinkLabelsTextColor={theme.palette.secondary[200]}
         arcLinkLabelsThickness={2}
         arcLinkLabelsColor={{ from: 'color' }}
@@ -108,7 +100,7 @@ const BreakdownChart = ({ isDashboard = false }) => {
             itemsSpacing: 0,
             itemWidth: 85,
             itemHeight: 18,
-            itemTextColor: '#999',
+            itemTextColor: theme.palette.primary[600],
             itemDirection: 'left-to-right',
             itemOpacity: 1,
             symbolSize: 18,

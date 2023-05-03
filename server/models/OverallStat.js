@@ -4,14 +4,14 @@ const OverallStatSchema = mongoose.Schema(
   {
     totalCustomers: Number,
     yearlySalesTotal: Number,
-    yearlyTotalSolutions: Number,
+    yearlyTotalSoldUnits: Number,
     year: Number,
     monthlyData: [
       {
         month: String,
         totalSales: Number,
         totalUnits: Number,
-      }, 
+      },
     ],
     dailyData: [{ date: String, totalSales: Number, totalUnits: Number }],
     salesByCategory: {
