@@ -5,7 +5,7 @@
 * Admin can visualize data through pie and line charts, as well as choropleth maps.
 * The app uses the MongoDB aggregate calls for reducing the query complexity and also offers server pagination, front-end pagination, sorting and filtering options for easy navigation and analysis of large data sets.
 * Line charts with date pickers enable admin to select the data within the desired period of time for better insights, such as viewing total sale and unit statistics for a specific year, and tracking other key metrics such as transactions and user data.
-* The dashboard provides a dark and light mode theming feature that allows users to customize their experience based on their personal preferences.
+* The dashboard provides a dark and light mode theming feature that allow users to customize their experience based on their personal preferences.
 * With its advanced features and intuitive interface, the MERN Stack Admin Dashboard is an excellent tool for businesses and organizations that rely on data to make critical decisions.
 
 You can view my app by visiting the following link (it's going to take some time to load the apis the first time you go to the website):
