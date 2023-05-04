@@ -1,14 +1,18 @@
 # Admin-Dashboard-Fullstack-MERN
 
-You can view my app by visiting the following link ( its going to take some time to load the apis the first time you go to the website ) 
+### Overview
+* The MERN Stack Admin Dashboard is an application that is designed to offer an responsive user-friendly interface for viewing data, leveraging the MERN(MongoDB, Express, React, Node.js) stack technology, Material UI, Material UI Data Grid, Nivo Charts, Redux Toolkit, and Redux Toolkit Query.
+* Admin can visualize data through pie and line charts, as well as choropleth maps.
+* The app uses the MongoDB aggregate calls for reducing the query complexity and also offers server pagination, front-end pagination, and sorting and filtering options for easy navigation and analysis of large data sets.
+* Line charts with date pickers enable admin to select the data within the desired period of time for better insights, such as viewing total sales and units statistics for a specific year, and tracking other key metrics such as transactions and user data.
+* The dashboard provides a dark and light mode theming feature that allows users to customize their experience based on their personal preferences.
+* With its advanced features and intuitive interface, the MERN Stack Admin Dashboard is an excellent tool for businesses and organizations that rely on data to make informed decisions.
+
+You can view my app by visiting the following link (its going to take some time to load the apis the first time you go to the website):
 > https://admin-frontend-pwje.onrender.com
 
-### Overview
-The MERN Stack Admin Dashboard is an application that is designed to offer an intuitive interface for viewing data in a responsive user-friendly interface. It utilizes the MERN (MongoDB, Express, React, Node.js) stack technology, along with Material UI, Material UI Data Grid, Nivo Charts, Redux Toolkit, and Redux Toolkit Query.
-
-The dashboard provides a range of useful features, such as switching between a dark and light mode, choropleth maps, and pie and line charts, allowing users to easily visualize data. Additionally, the app offers front-end pagination and server pagination, applying the aggregate calls for reducing the query complexity as well as sorting and filtering options, making it easy to navigate and analyze large data sets.
-
-The app is hosted on Render Cloud. With its intuitive interface and powerful features, the MERN Stack Admin Dashboard is an excellent tool for businesses and organizations that rely on data to make informed decisions.
+A data model chart for the app could be find here: 
+> https://lucid.app/lucidchart/81ff5432-cc50-4c41-a7b8-7258fec1e630/view?page=0_0#
 
 #### For frontend used: 
  - **Material UI**
